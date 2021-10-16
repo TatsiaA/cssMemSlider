@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./img/background-with-smileys.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+}
+
+.wrapper {
+    height: 400px;
+    margin: 100px auto 0;
+    position: relative;
+    width: 700px;
+}
+
+.slider {
+    height: inherit;
+    width: inherit;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: sandybrown;
+}
+
+.wrapper > input {
+    display: none;
+}
