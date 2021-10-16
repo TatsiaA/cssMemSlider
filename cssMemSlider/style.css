@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-    height: 400px;
+    height: 470px;
     margin: 100px auto 0;
     position: relative;
     width: 700px;
@@ -23,10 +23,99 @@ body {
     width: inherit;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     background-color: sandybrown;
 }
 
 .wrapper > input {
     display: none;
 }
+
+.slides {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide1 {
+    background-image: url(./img/pic1.jpg);
+}
+.slide2 {
+    background-image: url(./img/pic2.jpg);
+}
+.slide3 {
+    background-image: url(./img/pic3.jpg);
+}
+.slide4 {
+    background-image: url(./img/pic4.jpg);
+}
+.slide5 {
+    background-image: url(./img/pic5.jpg);
+}
+
+.under {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.motto {
+    flex: 2;
+}
+
+.controls {
+    flex: 1;
+}
+
+.wrapper .controls {
+   // left: 50%;
+   // margin-left: -50px;
+   // position: absolute;
+}
+
+.wrapper .controls label {
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    margin: 35px 15px 0 15px;
+    position: relative;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.wrapper .controls label:after {
+    border: 2px solid darkslategrey;
+    content: " ";
+    display: block;
+    height: 14px;
+    left: -4px;
+    position: absolute;
+    top: -4px;
+    width: 14px;
+    border-radius: 50%;
+
+}
+
+.wrapper .controls label {
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    margin: 35px 15px 0 15px;
+    position: relative;
+    width: 10px;
+    border-radius: 50%;
+    transition: background ease-in-out 0.5s;
+}
+
+.wrapper .controls label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+    background: darkolivegreen;
+}
+
+
